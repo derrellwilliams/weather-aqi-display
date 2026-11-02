@@ -1,0 +1,8 @@
+name = "fridge-display"
+main = "src/index.js"
+compatibility_date = "2025-10-01"
+
+# 30-minute cache so PurpleAir points aren't wasted.
+[[kv_namespaces]]
+binding = "CACHE"
+id = "7be0b34db48e4e9caaec94bc582076f1"
