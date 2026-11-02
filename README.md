@@ -1,6 +1,6 @@
 # Fridge Display
 
-A little e-ink screen that sits on the fridge with magnets. Once an hour it shows the weather and the local air quality (the average of PurpleAir sensors within 5 miles), then goes back to sleep. My first hardware project, and no soldering.
+A little e-ink screen that sits on the fridge with magnets. Once an hour it shows the weather and the local air quality (the average of PurpleAir sensors within 5 miles), then goes back to sleep. 
 
 ![The fridge screen](docs/screen.png)
 
