@@ -1,4 +1,4 @@
-# AQI Display
+# Weather and AQI Display
 
 A little e-ink screen fridge magnet. Once an hour it shows the weather and the local air quality (the average of PurpleAir sensors within 5 miles), then goes back to sleep. 
 
