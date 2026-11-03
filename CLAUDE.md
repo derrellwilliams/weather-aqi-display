@@ -11,7 +11,7 @@ I've never built hardware before. This project is for learning how to plug parts
 - [x] Parts chosen and Seeed order placed on 2026-10-20 ($58.64, duties included); arrived 2026-10-30
 - [ ] Buy the remaining parts (see below)
 - [x] Get a PurpleAir API key and my latitude and longitude
-- [x] Build the cloud data endpoint: Cloudflare Worker `fridge-display` at https://fridge-display.fridge-display-cloud.workers.dev (needs `Authorization: Bearer <DEVICE_TOKEN>`; secrets come from `cloud/.dev.vars` via `wrangler secret bulk`; KV `CACHE` caches results for 30 min)
+- [x] Build the cloud data endpoint: Cloudflare Worker with a private name in gitignored `cloud/.worker-name` (URL lives in `firmware/fridge_4in26/secrets.h`; needs `Authorization: Bearer <DEVICE_TOKEN>`; deploy with `npm run deploy`, upload `cloud/.dev.vars` secrets with `npm run secrets`; KV `CACHE` caches results for 30 min)
 - [ ] Write the firmware and connect the hardware
 - [ ] Switch to battery power and mount it on the fridge
 

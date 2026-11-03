@@ -1,3 +1,5 @@
+# The deployed name is private (it becomes the public URL), so it lives in the
+# gitignored .worker-name file. Deploy with `npm run deploy`, not `wrangler deploy`.
 name = "fridge-display"
 main = "src/index.js"
 compatibility_date = "2025-10-01"
