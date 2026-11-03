@@ -101,7 +101,7 @@ function buildView(raw, nowUtc) {
     const inches = d.precipitation_sum[0] ?? 0;
     const type = precipType(d.weather_code[0], d.snowfall_sum[0]);
     if (type === "none" && pct < 30) {
-      view.precip_label = "NO PRECIP";
+      view.precip_label = `${pct}% Precip Today`;
     } else {
       view.precip_icon = type === "snow" ? "snowflake" : "drop";
       view.precip_label =
