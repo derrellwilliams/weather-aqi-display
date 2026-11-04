@@ -134,18 +134,18 @@ def temp(v):
 
 
 def draw(s, d, L):
-    s.text("GeistSemiBold34", d.get("greeting", ""), L["LEFT"], L["HEADER_Y"])
-    s.text("GeistSemiBold34", d.get("date", ""), L["RIGHT"], L["HEADER_Y"], right=True)
+    s.text("InterSemiBold40", d.get("greeting", ""), L["LEFT"], L["HEADER_Y"])
+    s.text("InterSemiBold40", d.get("date", ""), L["RIGHT"], L["HEADER_Y"], right=True)
 
-    s.text("GeistMedium150", temp(d.get("temp")), L["LEFT"], L["BIG_Y"])
+    s.text("InterDisplayBold150", temp(d.get("temp")), L["LEFT"], L["BIG_Y"])
     hi = "H " + temp(d.get("hi"))
-    s.text("GeistMedium21", hi, L["LEFT"], L["ROW1_Y"])
-    s.text("GeistMedium21", "L " + temp(d.get("lo")), L["LEFT"] + s.width("GeistMedium21", hi) + 20, L["ROW1_Y"])
-    s.text("GeistMedium21", d.get("precip_label", ""), L["LEFT"], L["ROW2_Y"])
+    s.text("InterMedium26", hi, L["LEFT"], L["ROW1_Y"])
+    s.text("InterMedium26", "L " + temp(d.get("lo")), L["LEFT"] + s.width("InterMedium26", hi) + 20, L["ROW1_Y"])
+    s.text("InterMedium26", d.get("precip_label", ""), L["LEFT"], L["ROW2_Y"])
 
     aqi = d.get("aqi")
-    s.text("GeistMedium150", "--" if aqi is None else str(aqi), L["COL2"], L["BIG_Y"])
-    s.text("GeistMedium21", d.get("aqi_label", ""), L["COL2"], L["ROW1_Y"])
+    s.text("InterDisplayBold150", "--" if aqi is None else str(aqi), L["COL2"], L["BIG_Y"])
+    s.text("InterMedium26", d.get("aqi_label", ""), L["COL2"], L["ROW1_Y"])
     if aqi is not None:
         x, y, bw, bh = L["COL2"], L["BAR_Y"], L["BAR_W"], L["BAR_H"]
         s.rect(x, y, bw, bh)
@@ -167,8 +167,8 @@ def draw(s, d, L):
     for i, h in enumerate(d.get("hours", [])[:7]):
         x = L["LEFT"] + i * L["GRID"]
         s.icon(h.get("icon", "cloud"), x, L["HOURS_Y"])
-        s.text("GeistMedium28", temp(h.get("t")), x, L["HOURS_Y"] + 61)
-        s.text("GeistMedium21", h.get("label", ""), x, L["HOURS_Y"] + 91)
+        s.text("InterBold34", temp(h.get("t")), x, L["HOUR_T_Y"])
+        s.text("InterMedium26", h.get("label", ""), x, L["HOUR_L_Y"])
 
 
 def write_png(path, px):

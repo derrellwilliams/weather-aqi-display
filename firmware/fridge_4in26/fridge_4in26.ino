@@ -14,7 +14,7 @@
 #include "secrets.h"
 
 // ---- Settings ----
-#define TEST_MODE 1          // 1 = refresh every minute. Set 0 for the fridge (server picks the schedule).
+#define TEST_MODE 0          // 1 = refresh every minute. Set 0 for the fridge (server picks the schedule).
 const int RETRY_MINUTES = 60;  // after a Wi-Fi or server failure
 
 EPaper epaper;
@@ -25,12 +25,13 @@ const int LEFT = 40;
 const int RIGHT = 760;
 const int GRID = 110;
 const int COL2 = LEFT + 3 * GRID;  // 370
-const int HEADER_Y = 62;           // baselines
-const int BIG_Y = 223;             // equal space above (to header) and below (to hours)
-const int ROW1_Y = BIG_Y + 43;
-const int ROW2_Y = BIG_Y + 79;
-const int HOURS_Y = 356;           // top of the hourly icons
-const int BAR_W = RIGHT - COL2, BAR_H = 14, BAR_Y = ROW2_Y - 8 - BAR_H / 2;
+const int HEADER_Y = 64;           // baselines
+const int BIG_Y = 214;             // equal space above (to header) and below (to hours)
+const int ROW1_Y = BIG_Y + 44;
+const int ROW2_Y = BIG_Y + 82;
+const int HOURS_Y = 336;           // top of the hourly icons
+const int HOUR_T_Y = HOURS_Y + 76, HOUR_L_Y = HOURS_Y + 108;  // hourly temp and label baselines
+const int BAR_W = RIGHT - COL2, BAR_H = 14, BAR_Y = ROW2_Y - 10 - BAR_H / 2;  // centered on the label's caps
 
 void setup() {
   Serial.begin(115200);
@@ -163,23 +164,23 @@ void drawScreen(JsonDocument &d) {
   epaper.setTextDatum(L_BASELINE);
 
   // Header: greeting on the left, date flush right.
-  text(GeistSemiBold34, d["greeting"] | "", LEFT, HEADER_Y);
+  text(InterSemiBold40, d["greeting"] | "", LEFT, HEADER_Y);
   epaper.setTextDatum(R_BASELINE);
-  text(GeistSemiBold34, d["date"] | "", RIGHT, HEADER_Y);
+  text(InterSemiBold40, d["date"] | "", RIGHT, HEADER_Y);
   epaper.setTextDatum(L_BASELINE);
 
   // Middle row, centered between the header and the hourly row.
   // Left: temperature
-  text(GeistMedium150, fmtTemp(d["temp"]), LEFT, BIG_Y);
+  text(InterDisplayBold150, fmtTemp(d["temp"]), LEFT, BIG_Y);
   String hi = "H " + fmtTemp(d["hi"]);
-  text(GeistMedium21, hi, LEFT, ROW1_Y);
-  text(GeistMedium21, "L " + fmtTemp(d["lo"]), LEFT + textW(GeistMedium21, hi) + 20, ROW1_Y);
-  text(GeistMedium21, d["precip_label"] | "", LEFT, ROW2_Y);
+  text(InterMedium26, hi, LEFT, ROW1_Y);
+  text(InterMedium26, "L " + fmtTemp(d["lo"]), LEFT + textW(InterMedium26, hi) + 20, ROW1_Y);
+  text(InterMedium26, d["precip_label"] | "", LEFT, ROW2_Y);
 
   // Right: air quality
   String aqi = d["aqi"].isNull() ? String("--") : String(d["aqi"].as<int>());
-  text(GeistMedium150, aqi, COL2, BIG_Y);
-  text(GeistMedium21, d["aqi_label"] | "", COL2, ROW1_Y);
+  text(InterDisplayBold150, aqi, COL2, BIG_Y);
+  text(InterMedium26, d["aqi_label"] | "", COL2, ROW1_Y);
   if (!d["aqi"].isNull()) drawAqiBar(d["aqi_pos"] | 0.0f);
 
   // Bottom: next hours, one per grid column
@@ -187,8 +188,8 @@ void drawScreen(JsonDocument &d) {
   for (int i = 0; i < (int)hours.size() && i < 7; i++) {
     int x = LEFT + i * GRID;
     icon(hours[i]["icon"] | "cloud", x, HOURS_Y);
-    text(GeistMedium28, fmtTemp(hours[i]["t"]), x, HOURS_Y + 61);
-    text(GeistMedium21, hours[i]["label"] | "", x, HOURS_Y + 91);
+    text(InterBold34, fmtTemp(hours[i]["t"]), x, HOUR_T_Y);
+    text(InterMedium26, hours[i]["label"] | "", x, HOUR_L_Y);
   }
 
   epaper.update();

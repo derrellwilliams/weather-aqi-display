@@ -16,4 +16,4 @@ A little e-ink screen fridge magnet. Once an hour it shows the weather and the l
 
 ## How it works
 
-A Cloudflare Worker (`cloud/`) does the work: it pulls PurpleAir and Open-Meteo data and sends back ready-to-draw JSON. The XIAO (`firmware/`) wakes up, grabs it, draws it in Geist with Phosphor icons, and goes back to sleep until the next hour.
+A Cloudflare Worker (`cloud/`) does the work: it pulls PurpleAir and Open-Meteo data and sends back ready-to-draw JSON. The XIAO (`firmware/`) wakes up, grabs it, draws it in Inter with Phosphor icons, and goes back to sleep until the next hour.
