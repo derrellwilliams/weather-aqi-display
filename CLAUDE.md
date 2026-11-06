@@ -65,7 +65,7 @@ Cloud endpoint (free tier)
 - **KV caches the raw upstream data for 30 min**; labels are built fresh on each request.
 - **The JSON is ready to draw**, so the device only places it:
   `{greeting, date, temp, hi, lo, precip_icon, precip_label, aqi, aqi_label, aqi_pos, hours:[{t, icon, label}], sleep_min}`
-- **`sleep_min`** wakes the device at 1 minute past each hour and skips 10 PM–6 AM.
+- **`sleep_min`** wakes the device at 1 minute past each hour and sleeps after the 11:01 PM update until 4:01 AM.
 
 ## Firmware notes
 - **Tools:** Arduino IDE 2, the ESP32 board package, and the **XIAO_ESP32C3** board. Seeed's wiki example wrongly says C6.

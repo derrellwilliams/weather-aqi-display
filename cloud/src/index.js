@@ -7,8 +7,8 @@
 const RADIUS_MI = 5;
 const CACHE_SECONDS = 30 * 60;
 const CACHE_KEY = "fridge-raw-v2";
-const NIGHT_START_HOUR = 22; // no updates from 10 pm...
-const NIGHT_END_HOUR = 6; // ...until 6 am
+const NIGHT_START_HOUR = 23; // sleep after the 11:01 pm update...
+const NIGHT_END_HOUR = 4; // ...until 4:01 am
 
 export default {
   async fetch(request, env) {
