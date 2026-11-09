@@ -16,22 +16,7 @@ I've never built hardware before. This project is for learning how to plug parts
 - [ ] Switch to battery power and mount it on the fridge
 
 ## Hardware
-**Ordered from seeedstudio.com:**
-
-| Item | SKU | Qty | Role |
-|---|---|---|---|
-| ePaper Driver Board for Seeed Studio XIAO (V2) | 114993558 | 2 | Adapter board: XIAO socket, 24-pin screen connector, JST battery plug with switch, built-in LiPo charging |
-| XIAO ESP32-C3 (Pre-Soldered) | 102010633 | 2 | Wi-Fi microcontroller (the "brain"). Comes with a small U.FL Wi-Fi antenna; attach it. |
-| 4.26" Monochrome ePaper, 800×480 | 114993631 | 1 | Main fridge screen |
-| 2.9" Quadruple Color ePaper, 128×296 (black/white/red/yellow) | 104990855 | 1 | Experiment: AQI color-coded black, yellow or red. Refreshes in about 25 s, with flicker. |
-
-The second XIAO and driver board are spares, and they also let both screens run at the same time.
-
-**Still to buy elsewhere:**
-- 2× 3.7V LiPo battery, **JST-PH 2.0** connector. Plan: **EEMB 963450 1800 mAh** (Amazon), whose listing diagram shows the correct polarity; still check each one on arrival. **Not EEMB B08214DJLJ (2000 mAh):** its polarity is reversed for this board. With the plug's ridged side facing you and the wires pointing down, red must be on the RIGHT.
-- Adhesive neodymium magnets
-- A USB-C cable that carries data
-- A rigid backing for each screen (foamcore, cardboard, or a 3D-printed case)
+Parts ordered, parts still to buy, and which battery to get (one common model has reversed polarity) are in `docs/parts.md`. Read it before any buying or parts question.
 
 **⚠️ Handle with care:**
 - **Battery polarity:** before plugging the battery in, check that its red wire lines up with the **+** mark on the driver board. Plugging it in reversed can destroy the charging chip.
@@ -102,13 +87,7 @@ The CLI is bundled inside Arduino IDE.app at `Contents/Resources/app/lib/backend
 - `arduino-cli monitor` quits right away when it's run from a script, and reconnecting in a fast loop can hang the board. That's why `serial.sh` uses `stty` and `cat` and pauses between reconnects.
 
 ## Troubleshooting
-| Symptom | Cause | Fix |
-|---|---|---|
-| No `/dev/cu.usbmodem*` port | The board is in deep sleep, and USB is off while it sleeps | Hold B, tap R, then release B for download mode. The buttons are tiny, at the USB-C end of the XIAO; press them with a fingernail or a wooden toothpick, never metal |
-| Board gets a 404 and sleeps 60 min | Old firmware still points at the deleted Worker URL | Re-flash. **Re-flash every XIAO after the Worker URL changes**; the spare XIAO may still need it |
-| The log looks fine (data fetched, `Sleeping`) but the screen doesn't change | The **ribbon cable has come loose**. It fails silently, with no error | Run `hello_4in26` to confirm. Then, with USB unplugged, flip the latch up, reseat the ribbon straight and fully, press the latch down, and press the XIAO firmly into its socket |
-| The port is present but there's no log and the board never sleeps | The board hung partway through a cycle | Tap R |
-| Values seem stale | The Worker's KV cache lasts 30 min | Wait, or check the endpoint with curl |
+The symptom → cause → fix table is in `docs/troubleshooting.md`. Read it before debugging the device.
 
 When something breaks, rule out the layers in order: endpoint (curl with the token) → serial log → `hello_4in26` → cables.
 
