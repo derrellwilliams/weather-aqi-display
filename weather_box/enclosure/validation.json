@@ -1,0 +1,170 @@
+{
+  "revision": "4 \u2014 corrected first-fit print",
+  "units": "mm",
+  "dimensions": [
+    126.0,
+    82.0,
+    36.0
+  ],
+  "parts": {
+    "01_front_shell": {
+      "bounds_mm": [
+        126.0,
+        82.0,
+        33.0
+      ],
+      "triangles": 2426,
+      "watertight": true,
+      "consistent_winding": true,
+      "connected_solids": 1,
+      "layer_height_mm": 0.2,
+      "layers_checked": 165,
+      "max_unsupported_area_mm2": 0.0,
+      "volume_mm3": 41439.28,
+      "solid_PLA_mass_g_at_1_24": 51.38,
+      "bytes": 121384,
+      "sha256": "ecb8c94ac6e3ddb5b63a585d391b8eea1f3424dd60247921117ab6e3364191a7"
+    },
+    "02_electronics_carrier": {
+      "bounds_mm": [
+        120.0,
+        76.0,
+        26.2
+      ],
+      "triangles": 3634,
+      "watertight": true,
+      "consistent_winding": true,
+      "connected_solids": 1,
+      "layer_height_mm": 0.2,
+      "layers_checked": 131,
+      "max_unsupported_area_mm2": 0.0,
+      "volume_mm3": 21665.88,
+      "solid_PLA_mass_g_at_1_24": 26.87,
+      "bytes": 181784,
+      "sha256": "1d2767a44e27baa52bc980a11f2bf35ba7de6e17dac9cc93c61984fc725be3b2"
+    },
+    "03_back": {
+      "bounds_mm": [
+        126.0,
+        82.0,
+        3.0
+      ],
+      "triangles": 3356,
+      "watertight": true,
+      "consistent_winding": true,
+      "connected_solids": 1,
+      "layer_height_mm": 0.2,
+      "layers_checked": 15,
+      "max_unsupported_area_mm2": 0.0,
+      "volume_mm3": 30054.05,
+      "solid_PLA_mass_g_at_1_24": 37.27,
+      "bytes": 167884,
+      "sha256": "6755db6805ba807fdc848bc15546f2cf895a37bc09609657a1b41c617acb9947"
+    },
+    "optional_fit_coupon": {
+      "bounds_mm": [
+        66.0,
+        30.0,
+        6.8
+      ],
+      "triangles": 1798,
+      "watertight": true,
+      "consistent_winding": true,
+      "connected_solids": 1,
+      "layer_height_mm": 0.2,
+      "layers_checked": 34,
+      "max_unsupported_area_mm2": 0.0,
+      "volume_mm3": 7608.53,
+      "solid_PLA_mass_g_at_1_24": 9.43,
+      "bytes": 89984,
+      "sha256": "dade06db88c89138d75ab2316dc67b1f5cc7f7e5a61c1747c7340eb9fb6c8ee5"
+    }
+  },
+  "intersections_mm3": {
+    "01_front_shell / 02_electronics_carrier": -0.0,
+    "01_front_shell / 03_back": 0.0,
+    "02_electronics_carrier / 03_back": -0.0,
+    "screen / 01_front_shell": 0.0,
+    "screen / 02_electronics_carrier": 0.0,
+    "screen / 03_back": 0.0,
+    "driver_board / 01_front_shell": 0.0,
+    "driver_board / 02_electronics_carrier": 0.0,
+    "driver_board / 03_back": 0.0,
+    "XIAO / 01_front_shell": 0.0,
+    "XIAO / 02_electronics_carrier": 0.0,
+    "XIAO / 03_back": 0.0,
+    "USB / 01_front_shell": 0.0,
+    "USB / 02_electronics_carrier": 0.0,
+    "USB / 03_back": 0.0,
+    "battery / 01_front_shell": 0.0,
+    "battery / 02_electronics_carrier": -0.0,
+    "battery / 03_back": 0.0,
+    "antenna / 01_front_shell": 0.0,
+    "antenna / 02_electronics_carrier": 0.0,
+    "antenna / 03_back": 0.0
+  },
+  "keepouts_mm3": {
+    "board_pin_envelope / 01_front_shell": 0.0,
+    "board_pin_envelope / 02_electronics_carrier": 0.0,
+    "board_pin_envelope / 03_back": 0.0,
+    "USB_plug_access / 01_front_shell": 0.0,
+    "USB_plug_access / 02_electronics_carrier": 0.0,
+    "USB_plug_access / 03_back": 0.0,
+    "battery_lead_aisle / 01_front_shell": 0.0,
+    "battery_lead_aisle / 02_electronics_carrier": 0.0,
+    "battery_lead_aisle / 03_back": 0.0
+  },
+  "physical_fit_tested": false,
+  "slicer_tested": false,
+  "vertical_insertion_sweep": {
+    "step_mm": 1,
+    "travel_mm": 35,
+    "carrier_vs_shell": "pass",
+    "carrier_vs_antenna": "pass",
+    "screen_vs_shell": "pass"
+  },
+  "nut_fits": [
+    {
+      "center": [
+        6.0,
+        6.0
+      ],
+      "seated_and_insertion_clear": true
+    },
+    {
+      "center": [
+        6.0,
+        76.0
+      ],
+      "seated_and_insertion_clear": true
+    },
+    {
+      "center": [
+        120.0,
+        6.0
+      ],
+      "seated_and_insertion_clear": true
+    },
+    {
+      "center": [
+        120.0,
+        76.0
+      ],
+      "seated_and_insertion_clear": true
+    }
+  ],
+  "board_stops": {
+    "nominal_longitudinal_clearance_each_end_mm": 0.4,
+    "restrained_both_directions": true,
+    "connector_opening_is_assumed_not_measured": true
+  },
+  "screw_stack": {
+    "under_head_z": 34.5,
+    "length": 30,
+    "tip_z": 4.5,
+    "nut_bottom_z": 4,
+    "nut_top_z": 6.4,
+    "thread_engagement_mm": 1.9,
+    "blind_bore_bottom_z": 3.2
+  }
+}

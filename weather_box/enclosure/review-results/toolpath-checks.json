@@ -1,0 +1,58 @@
+[
+  {
+    "file": "01_front_shell-analysis-only.gcode",
+    "nonempty_layers": 165,
+    "monotonic_layer_z": true,
+    "min_extruding_moves_per_layer": 215,
+    "extrusion_xy_bounds_mm": [
+      12.2,
+      34.2,
+      137.8,
+      115.8
+    ],
+    "within_150mm_bed": true,
+    "last_layer_z_mm": 33.0
+  },
+  {
+    "file": "02_electronics_carrier-analysis-only.gcode",
+    "nonempty_layers": 131,
+    "monotonic_layer_z": true,
+    "min_extruding_moves_per_layer": 354,
+    "extrusion_xy_bounds_mm": [
+      15.2,
+      37.2,
+      134.8,
+      112.8
+    ],
+    "within_150mm_bed": true,
+    "last_layer_z_mm": 26.2
+  },
+  {
+    "file": "03_back-analysis-only.gcode",
+    "nonempty_layers": 15,
+    "monotonic_layer_z": true,
+    "min_extruding_moves_per_layer": 1441,
+    "extrusion_xy_bounds_mm": [
+      12.2,
+      34.2,
+      137.8,
+      115.8
+    ],
+    "within_150mm_bed": true,
+    "last_layer_z_mm": 3.0
+  },
+  {
+    "file": "optional_fit_coupon-analysis-only.gcode",
+    "nonempty_layers": 34,
+    "monotonic_layer_z": true,
+    "min_extruding_moves_per_layer": 197,
+    "extrusion_xy_bounds_mm": [
+      42.2,
+      60.2,
+      107.8,
+      89.8
+    ],
+    "within_150mm_bed": true,
+    "last_layer_z_mm": 6.8
+  }
+]

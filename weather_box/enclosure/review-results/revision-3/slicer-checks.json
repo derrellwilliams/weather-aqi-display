@@ -1,0 +1,94 @@
+[
+  {
+    "part": "01_front_shell",
+    "exit_code": 0,
+    "profile": "generic PLA 0.4 nozzle; 0.2 layers; NOT Holladay machine G-code",
+    "layers": 165,
+    "statistics": [
+      "; filament used [mm] = 16953.01",
+      "; filament used [cm3] = 40.78",
+      "; filament used [g] = 50.56",
+      "; total filament used [g] = 50.56",
+      "; total filament used for wipe tower [g] = 0.00",
+      "; estimated printing time (normal mode) = 4h 17m 30s"
+    ],
+    "feature_types": [
+      "Bridge infill",
+      "Custom",
+      "External perimeter",
+      "Internal infill",
+      "Perimeter",
+      "Solid infill",
+      "Top solid infill"
+    ]
+  },
+  {
+    "part": "02_electronics_carrier",
+    "exit_code": 0,
+    "profile": "generic PLA 0.4 nozzle; 0.2 layers; NOT Holladay machine G-code",
+    "layers": 131,
+    "statistics": [
+      "; filament used [mm] = 8700.93",
+      "; filament used [cm3] = 20.93",
+      "; filament used [g] = 25.95",
+      "; total filament used [g] = 25.95",
+      "; total filament used for wipe tower [g] = 0.00",
+      "; estimated printing time (normal mode) = 3h 29m 47s"
+    ],
+    "feature_types": [
+      "Bridge infill",
+      "Custom",
+      "External perimeter",
+      "Internal infill",
+      "Perimeter",
+      "Solid infill",
+      "Top solid infill"
+    ]
+  },
+  {
+    "part": "03_back",
+    "exit_code": 0,
+    "profile": "generic PLA 0.4 nozzle; 0.2 layers; NOT Holladay machine G-code",
+    "layers": 15,
+    "statistics": [
+      "; filament used [mm] = 10037.71",
+      "; filament used [cm3] = 24.14",
+      "; filament used [g] = 29.94",
+      "; total filament used [g] = 29.94",
+      "; total filament used for wipe tower [g] = 0.00",
+      "; estimated printing time (normal mode) = 3h 35m 11s"
+    ],
+    "feature_types": [
+      "Bridge infill",
+      "Custom",
+      "External perimeter",
+      "Internal infill",
+      "Perimeter",
+      "Solid infill",
+      "Top solid infill"
+    ]
+  },
+  {
+    "part": "optional_fit_coupon",
+    "exit_code": 0,
+    "profile": "generic PLA 0.4 nozzle; 0.2 layers; NOT Holladay machine G-code",
+    "layers": 20,
+    "statistics": [
+      "; filament used [mm] = 2243.23",
+      "; filament used [cm3] = 5.40",
+      "; filament used [g] = 6.69",
+      "; total filament used [g] = 6.69",
+      "; total filament used for wipe tower [g] = 0.00",
+      "; estimated printing time (normal mode) = 46m 38s"
+    ],
+    "feature_types": [
+      "Bridge infill",
+      "Custom",
+      "External perimeter",
+      "Internal infill",
+      "Perimeter",
+      "Solid infill",
+      "Top solid infill"
+    ]
+  }
+]

@@ -7,7 +7,7 @@ set -eu
 SKETCH="${1:-fridge_4in26}"
 case "$SKETCH" in ''|*[!a-z0-9_]*) echo "bad sketch name: $SKETCH" >&2; exit 2 ;; esac
 
-ROOT="$HOME/projects/hardware"
+ROOT="$HOME/projects/hardware/weather_box"
 BUILD="$ROOT/firmware/build/$SKETCH"
 CLI="/Applications/Arduino IDE.app/Contents/Resources/app/lib/backend/resources/arduino-cli"
 FQBN="esp32:esp32:XIAO_ESP32C3:PartitionScheme=huge_app"

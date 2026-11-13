@@ -1,0 +1,102 @@
+[
+  {
+    "source_revision": 4,
+    "stl_sha256": "ecb8c94ac6e3ddb5b63a585d391b8eea1f3424dd60247921117ab6e3364191a7",
+    "part": "01_front_shell",
+    "exit_code": 0,
+    "profile": "generic PLA 0.4 nozzle; 0.2 layers; NOT Holladay machine G-code",
+    "layers": 165,
+    "statistics": [
+      "; filament used [mm] = 16952.22",
+      "; filament used [cm3] = 40.77",
+      "; filament used [g] = 50.56",
+      "; total filament used [g] = 50.56",
+      "; total filament used for wipe tower [g] = 0.00",
+      "; estimated printing time (normal mode) = 4h 18m 12s"
+    ],
+    "feature_types": [
+      "Bridge infill",
+      "Custom",
+      "External perimeter",
+      "Internal infill",
+      "Perimeter",
+      "Solid infill",
+      "Top solid infill"
+    ]
+  },
+  {
+    "source_revision": 4,
+    "stl_sha256": "1d2767a44e27baa52bc980a11f2bf35ba7de6e17dac9cc93c61984fc725be3b2",
+    "part": "02_electronics_carrier",
+    "exit_code": 0,
+    "profile": "generic PLA 0.4 nozzle; 0.2 layers; NOT Holladay machine G-code",
+    "layers": 131,
+    "statistics": [
+      "; filament used [mm] = 8733.55",
+      "; filament used [cm3] = 21.01",
+      "; filament used [g] = 26.05",
+      "; total filament used [g] = 26.05",
+      "; total filament used for wipe tower [g] = 0.00",
+      "; estimated printing time (normal mode) = 3h 30m 58s"
+    ],
+    "feature_types": [
+      "Bridge infill",
+      "Custom",
+      "External perimeter",
+      "Internal infill",
+      "Perimeter",
+      "Solid infill",
+      "Top solid infill"
+    ]
+  },
+  {
+    "source_revision": 4,
+    "stl_sha256": "6755db6805ba807fdc848bc15546f2cf895a37bc09609657a1b41c617acb9947",
+    "part": "03_back",
+    "exit_code": 0,
+    "profile": "generic PLA 0.4 nozzle; 0.2 layers; NOT Holladay machine G-code",
+    "layers": 15,
+    "statistics": [
+      "; filament used [mm] = 10037.71",
+      "; filament used [cm3] = 24.14",
+      "; filament used [g] = 29.94",
+      "; total filament used [g] = 29.94",
+      "; total filament used for wipe tower [g] = 0.00",
+      "; estimated printing time (normal mode) = 3h 35m 11s"
+    ],
+    "feature_types": [
+      "Bridge infill",
+      "Custom",
+      "External perimeter",
+      "Internal infill",
+      "Perimeter",
+      "Solid infill",
+      "Top solid infill"
+    ]
+  },
+  {
+    "source_revision": 4,
+    "stl_sha256": "dade06db88c89138d75ab2316dc67b1f5cc7f7e5a61c1747c7340eb9fb6c8ee5",
+    "part": "optional_fit_coupon",
+    "exit_code": 0,
+    "profile": "generic PLA 0.4 nozzle; 0.2 layers; NOT Holladay machine G-code",
+    "layers": 34,
+    "statistics": [
+      "; filament used [mm] = 2395.73",
+      "; filament used [cm3] = 5.76",
+      "; filament used [g] = 7.15",
+      "; total filament used [g] = 7.15",
+      "; total filament used for wipe tower [g] = 0.00",
+      "; estimated printing time (normal mode) = 50m 15s"
+    ],
+    "feature_types": [
+      "Bridge infill",
+      "Custom",
+      "External perimeter",
+      "Internal infill",
+      "Perimeter",
+      "Solid infill",
+      "Top solid infill"
+    ]
+  }
+]

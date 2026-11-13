@@ -59,7 +59,7 @@ bool connectWiFi() {
     Serial.println("Wi-Fi failed");
     return false;
   }
-  Serial.println("Wi-Fi connected");
+  Serial.printf("Wi-Fi connected, signal %d dBm\n", WiFi.RSSI());
   return true;
 }
 

@@ -1,0 +1,115 @@
+{
+  "source_revision": 4,
+  "nuts": [
+    {
+      "center": [
+        6,
+        6
+      ],
+      "standard_nut_interference_mm3": -0.0,
+      "fits_nominal_seated_position": true
+    },
+    {
+      "center": [
+        6,
+        76
+      ],
+      "standard_nut_interference_mm3": 0.0,
+      "fits_nominal_seated_position": true
+    },
+    {
+      "center": [
+        120,
+        6
+      ],
+      "standard_nut_interference_mm3": 0.0,
+      "fits_nominal_seated_position": true
+    },
+    {
+      "center": [
+        120,
+        76
+      ],
+      "standard_nut_interference_mm3": -0.0,
+      "fits_nominal_seated_position": true
+    }
+  ],
+  "meshes": {
+    "01_front_shell.stl": {
+      "sha256": "ecb8c94ac6e3ddb5b63a585d391b8eea1f3424dd60247921117ab6e3364191a7",
+      "watertight": true,
+      "winding_consistent": true,
+      "dimensions_mm": [
+        126.0,
+        82.0,
+        33.0
+      ],
+      "min_z_mm": 0.0,
+      "connected_solids": 1
+    },
+    "02_electronics_carrier.stl": {
+      "sha256": "1d2767a44e27baa52bc980a11f2bf35ba7de6e17dac9cc93c61984fc725be3b2",
+      "watertight": true,
+      "winding_consistent": true,
+      "dimensions_mm": [
+        120.0,
+        76.0,
+        26.200000762939453
+      ],
+      "min_z_mm": 0.0,
+      "connected_solids": 1
+    },
+    "03_back.stl": {
+      "sha256": "6755db6805ba807fdc848bc15546f2cf895a37bc09609657a1b41c617acb9947",
+      "watertight": true,
+      "winding_consistent": true,
+      "dimensions_mm": [
+        126.0,
+        82.0,
+        3.0
+      ],
+      "min_z_mm": 0.0,
+      "connected_solids": 1
+    },
+    "optional_fit_coupon.stl": {
+      "sha256": "dade06db88c89138d75ab2316dc67b1f5cc7f7e5a61c1747c7340eb9fb6c8ee5",
+      "watertight": true,
+      "winding_consistent": true,
+      "dimensions_mm": [
+        66.0,
+        30.0,
+        6.800000190734863
+      ],
+      "min_z_mm": 0.0,
+      "connected_solids": 1
+    }
+  },
+  "notes": [
+    "Nut check includes the complete exported shell, not just the isolated boss subtraction.",
+    "PCB slide check omits friction and cable geometry; it checks positive restraint after the nominal 0.4 mm fit clearance, not an actual load rating.",
+    "No real connector geometry, cable bend model, strap tension, magnet holding force or printer-specific fit is inferred."
+  ],
+  "coupon_nut_interference_mm3": 0.0,
+  "board_slide_check": [
+    {
+      "board_shift_toward_ribbon_mm": 0,
+      "carrier_collision_mm3": 2e-06
+    },
+    {
+      "board_shift_toward_ribbon_mm": 0.3,
+      "carrier_collision_mm3": 2e-06
+    },
+    {
+      "board_shift_toward_ribbon_mm": 0.5,
+      "carrier_collision_mm3": 0.672005
+    },
+    {
+      "board_shift_toward_ribbon_mm": 1,
+      "carrier_collision_mm3": 4.032006
+    },
+    {
+      "board_shift_toward_ribbon_mm": 2,
+      "carrier_collision_mm3": 8.064006
+    }
+  ]
+}
